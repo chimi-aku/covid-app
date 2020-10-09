@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
+
 //import moment from 'moment';
 import './App.css';
 
@@ -62,39 +63,44 @@ class App extends Component {
                             const begDay = data[data.length - 1];
                             const currDay = data[0];
 
-                            const confirmed = currDay.TotalConfirmed - begDay.TotalConfirmed;
-                            const deaths = currDay.TotalDeaths - begDay.TotalDeaths;
-                            const recovered = currDay.TotalRecovered - begDay.TotalRecovered;
-                            console.log(confirmed, deaths, recovered)
+                            const confirmed =
+                                currDay.TotalConfirmed - begDay.TotalConfirmed;
+                            const deaths =
+                                currDay.TotalDeaths - begDay.TotalDeaths;
+                            const recovered =
+                                currDay.TotalRecovered - begDay.TotalRecovered;
+                            console.log(confirmed, deaths, recovered);
 
                             this.setState({
                                 data: {
-                                    confirmed:confirmed,
+                                    confirmed: confirmed,
                                     deaths: deaths,
-                                    recovered: recovered
-                                }
+                                    recovered: recovered,
+                                },
                             });
                         });
                 } else {
                     URL = `https://api.covid19api.com/country/${country}?from=${begTimeUTC}&to=${currTimeUTC}`;
 
                     fetch(URL)
-                    .then((response) => response.json())
+                        .then((response) => response.json())
                         .then((data) => {
                             const begDay = data[0];
                             const currDay = data[data.length - 1];
-                            
-                            const confirmed = currDay.Confirmed - begDay.Confirmed;
+
+                            const confirmed =
+                                currDay.Confirmed - begDay.Confirmed;
                             const deaths = currDay.Deaths - begDay.Deaths;
-                            const recovered = currDay.Recovered - begDay.Recovered;
-                            console.log(confirmed, deaths, recovered)
+                            const recovered =
+                                currDay.Recovered - begDay.Recovered;
+                            console.log(confirmed, deaths, recovered);
 
                             this.setState({
                                 data: {
-                                    confirmed:confirmed,
+                                    confirmed: confirmed,
                                     deaths: deaths,
-                                    recovered: recovered
-                                }
+                                    recovered: recovered,
+                                },
                             });
                         });
                 }
@@ -135,20 +141,6 @@ class App extends Component {
         console.log(this.state.data);
     }
 
-    /*
-    hanfleFetchData = () => {
-        if(this.state.mode === 'numbers') {
-            if(this.state.country !== '' && this.state.country !== '') {
-                console.log('good form')
-            }
-            else {
-                console.log('bad form')
-            }
-
-        }
-
-    }
-    */
     render() {
         //FORM OPTIONS
         const countries = [
@@ -163,37 +155,50 @@ class App extends Component {
             { value: 'whole time', label: 'whole time' },
         ];
 
+        const selectStyle = {
+            color: '#BFC0C0',
+            backgroundColor: '#2D3142',
+        };
+
         return (
             <div className="App">
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className="form">
                     <Select
                         options={countries}
                         //value={this.state.country}
                         onChange={this.handleFormChange}
                         isSearchable
                         placeholder="select country"
+                        className="select"
                     />
                     <Select
                         options={timePeriods}
                         //value={this.state.country}
                         onChange={this.handleFormChange}
                         placeholder="select time period"
+                        className="select"
                     />
-                    <button type="submit">Submit</button>
+                    <button type="submit" className="button button-5">
+                        <div className="translate"></div>
+                        <span>Submit</span>
+                    </button>
                 </form>
-                <button>Graph</button>
+                <button className="button button-5">
+                    <div className="translate"></div>
+                    <span>Graph</span>
+                </button>
                 <div className="results">
-                    <div className="data">
+                    <div className="data confirmed">
                         <p>Confirmed:</p>
-                        <p>{this.state.data.confirmed}</p>
+                        <p className="num">{this.state.data.confirmed}</p>
                     </div>
-                    <div className="data">
+                    <div className="data deaths">
                         <p>Deaths:</p>
-                        <p>{this.state.data.deaths}</p>
+                        <p className="num">{this.state.data.deaths}</p>
                     </div>
-                    <div className="data">
+                    <div className="data recovered">
                         <p>Recovered:</p>
-                        <p>{this.state.data.recovered}</p>
+                        <p className="num">{this.state.data.recovered}</p>
                     </div>
                 </div>
             </div>
