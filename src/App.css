@@ -136,6 +136,12 @@ a {
 }
 
 .chart {
+<<<<<<< HEAD
   width: 90%;
   height: auto;
+=======
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+>>>>>>> 52f2f1240983de19e173c21ba5e2c20d110ac59f
 }

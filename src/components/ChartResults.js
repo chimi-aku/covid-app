@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Bar, Line } from 'react-chartjs-2';
 import Page from './Page';
 
 const ChartResults = (props) => {
@@ -19,16 +19,62 @@ const ChartResults = (props) => {
                 data: props.chartData.map(day => day.Confirmed),
                 backgroundColor: 'rgb(163, 19, 48);',
                 borderColor: 'rgb(163, 19, 48);',
+                borderWidth: 1,
             },
+
         ]
         
+        console.log(chartData)
     })();
     
 
     return(
     <div className="chart">
-        <Bar
+        <Line 
+            data = {{
+                labels: chartData.labels,
+                datasets: [{
+                    label: 'confirmed',
+                    data: props.chartData.map(day => day.Confirmed),
+                    //backgroundColor: 'rgb(163, 19, 48)',
+                    borderColor: 'rgb(163, 19, 48)',
+                    borderWidth: 1,
+                },
+                {
+                    label: 'deaths',
+                    data: props.chartData.map(day => day.Deaths),
+                    //backgroundColor: 'rgb(46, 28, 32)',
+                    borderColor: 'rgb(46, 28, 32)',
+                    borderWidth: 1,
+                },
+                {
+                    label: 'recovered',
+                    data: props.chartData.map(day => day.Recovered),
+                    //backgroundColor: 'rgb(23, 83, 8)',
+                    borderColor: 'rgb(23, 83, 8)',
+                    borderWidth: 1,
+                },
+            
+            ]
+            }}
+            width={450} 
+            height={400}
+            options = {{
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+            }
+               
+        />
+        {/* <Line
             data={chartData}
+            width={40}
+            height={40}
             options={{
                 title: {
                     text: 'covid chart',
@@ -39,7 +85,7 @@ const ChartResults = (props) => {
                     position: 'rignt'
                 }
             }}
-        />
+        /> */}
     </div>);
 };
 
