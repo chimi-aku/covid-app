@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/chimi-aku/covid-app/static/css/main.7f254ffe.chunk.css",
+    "main.js": "/chimi-aku/covid-app/static/js/main.e557c3f6.chunk.js",
+    "main.js.map": "/chimi-aku/covid-app/static/js/main.e557c3f6.chunk.js.map",
+    "runtime-main.js": "/chimi-aku/covid-app/static/js/runtime-main.66e34fac.js",
+    "runtime-main.js.map": "/chimi-aku/covid-app/static/js/runtime-main.66e34fac.js.map",
+    "static/js/2.c0a2ccd2.chunk.js": "/chimi-aku/covid-app/static/js/2.c0a2ccd2.chunk.js",
+    "static/js/2.c0a2ccd2.chunk.js.map": "/chimi-aku/covid-app/static/js/2.c0a2ccd2.chunk.js.map",
+    "index.html": "/chimi-aku/covid-app/index.html",
+    "precache-manifest.86ac2fe922641fe536b30a87277e4192.js": "/chimi-aku/covid-app/precache-manifest.86ac2fe922641fe536b30a87277e4192.js",
+    "service-worker.js": "/chimi-aku/covid-app/service-worker.js",
+    "static/css/main.7f254ffe.chunk.css.map": "/chimi-aku/covid-app/static/css/main.7f254ffe.chunk.css.map",
+    "static/js/2.c0a2ccd2.chunk.js.LICENSE.txt": "/chimi-aku/covid-app/static/js/2.c0a2ccd2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66e34fac.js",
+    "static/js/2.c0a2ccd2.chunk.js",
+    "static/css/main.7f254ffe.chunk.css",
+    "static/js/main.e557c3f6.chunk.js"
+  ]
+}
