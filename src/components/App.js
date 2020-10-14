@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-<<<<<<< HEAD
-import { BrowserRouter as Router } from 'react-router-dom';
-
-=======
 import { BrowserRouter as Router, HashRouter } from 'react-router-dom';
->>>>>>> 52f2f1240983de19e173c21ba5e2c20d110ac59f
 //import moment from 'moment';
 import '../App.css';
 import Results from './Results';
@@ -170,11 +165,7 @@ class App extends Component {
         };
 
         return (
-<<<<<<< HEAD
-            <Router>
-=======
             <HashRouter basename={'/'}>
->>>>>>> 52f2f1240983de19e173c21ba5e2c20d110ac59f
                 <div className="App">
                     <form onSubmit={this.handleSubmit} className="form">
                         <Select
@@ -205,11 +196,7 @@ class App extends Component {
                         />
                     </div>
                 </div>
-<<<<<<< HEAD
-            </Router>
-=======
             </HashRouter>
->>>>>>> 52f2f1240983de19e173c21ba5e2c20d110ac59f
         );
     }
 }
