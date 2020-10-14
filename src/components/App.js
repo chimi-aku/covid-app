@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-import { BrowserRouter as Router } from 'react-router-dom';
-
+import { BrowserRouter as Router, HashRouter } from 'react-router-dom';
 //import moment from 'moment';
 import '../App.css';
 import Results from './Results';

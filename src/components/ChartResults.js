@@ -57,8 +57,8 @@ const ChartResults = (props) => {
             
             ]
             }}
-            width={400} 
-            height={300}
+            width={450} 
+            height={400}
             options = {{
                 scales: {
                     yAxes: [{
