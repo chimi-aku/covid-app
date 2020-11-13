@@ -42,27 +42,27 @@ Navigation component where are displaing results in Page where is Switch which i
 
 
 
-Page Component
+#### Page Component
 Switch with routes. "/" diplays numbers, chart displays chart.
 There is defined Error page in case wrong URL.
 
 
 
-ErrorPage Component
+#### ErrorPage Component
 Comunication about wrong URL address.
 
 
 
-Navigation Component
+#### Navigation Component
 Two buttons responsible for rediracting to "/" or "/chart". The way how results will be displayed.
 
 
 
-ChartResult Component
+#### ChartResult Component
 Component resposible for creating linear chart and filling data passed from App Component
 Chart is created by using react-chartjs-2 libary
 
 
 
-Results Component
+#### Results Component
 Displaying all data as numbers
