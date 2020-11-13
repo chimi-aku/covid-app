@@ -21,7 +21,7 @@ React Chart: https://github.com/reactchartjs/react-chartjs-2
 
 
 Techologies used to created this app:
-- HTML
+* HTML
 - CSS
 - JS
 - React
