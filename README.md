@@ -1,7 +1,7 @@
-## Covid APP
+# Covid APP
 ## Table of contents
-1. Overview
-2. How it works
+### 1. Overview
+### 2. How it works
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -27,7 +27,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 2. How it works
 
-## App Component
+#### App Component
 
 All essential data are in state object.
 
