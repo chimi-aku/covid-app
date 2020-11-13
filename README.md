@@ -13,11 +13,13 @@ Informations are divided into confirmed, dead, and recovered cases. They are dis
 
 All data are fetched from: https://covid19api.com/
 
+
 Libaries used:
 
-React Select https://react-select.com/home
+React Select: https://react-select.com/home
 
-React Chart https://github.com/reactchartjs/react-chartjs-2
+React Chart: https://github.com/reactchartjs/react-chartjs-2
+
 
 Techologies used to created this app:
 - HTML
