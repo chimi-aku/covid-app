@@ -15,6 +15,7 @@ All data are fetched from: https://covid19api.com/
 
 Libaries used:
 https://react-select.com/home
+
 https://github.com/reactchartjs/react-chartjs-2
 
 Techologies used to created this app:
