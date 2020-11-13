@@ -1,72 +1,68 @@
 ## Covid APP
 ## Table of contents
-# 1
+1. Overview
+2. How it works
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 1. Overview
 
-In the project directory, you can run:
+This app is created for checking what is actual situation about covid-19.
+User can choose country and four periords of time: yesterday, last 7 days, last 30 days and whole time period from the beginning of the covid-19 pandemy.
+Informations are divided into confirmed, dead, and recovered cases. They are displayed as numbers and reppresented graphically on a chart with timeline.
 
-### `npm start`
+All data are fetched from: https://covid19api.com/
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Libaries used:
+https://react-select.com/home
+https://github.com/reactchartjs/react-chartjs-2
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Techologies used to created this app:
+- HTML
+- CSS
+- JS
+- React
 
-### `npm test`
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 2. How it works
 
-### `npm run build`
+APP Component
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+All essential data are in state object.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+handleSubmit - if form is fill up properly fetch data and calculate time period.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+handleFormChange - updateing state what is in the form.
 
-### `npm run eject`
+In return:
+HashRouter because Router doesn't work properly on github pages.
+Form created by using react-select libary.
+Navigation component where are displaing results in Page where is Switch which is responsible for working the SPA.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Page Component
+Switch with routes. "/" diplays numbers, chart displays chart.
+There is defined Error page in case wrong URL.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ErrorPage Component
+Comunication about wrong URL address.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Navigation Component
+Two buttons responsible for rediracting to "/" or "/chart". The way how results will be displayed.
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+ChartResult Component
+Component resposible for creating linear chart and filling data passed from App Component
+Chart is created by using react-chartjs-2 libary
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Results Component
+Displaying all data as numbers
