@@ -27,7 +27,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 2. How it works
 
-#App Component
+## App Component
 
 All essential data are in state object.
 
