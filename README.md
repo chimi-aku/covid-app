@@ -14,17 +14,15 @@ All data are fetched from: https://covid19api.com/
 
 
 Libaries used:
-
-React Select: https://react-select.com/home
-
-React Chart: https://github.com/reactchartjs/react-chartjs-2
+* React Select: https://react-select.com/home
+* React Chart: https://github.com/reactchartjs/react-chartjs-2
 
 
 Techologies used to created this app:
 * HTML
-- CSS
-- JS
-- React
+* CSS
+* JS
+* React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
